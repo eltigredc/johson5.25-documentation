@@ -1,3 +1,4 @@
+
 /*Un array est un objet qui contient une serie de valeurs, separées par une virgule (>< variable qui ne peut stocker qu'une seule valeur). 
 Ces valeurs peuvent être :
 - Strings
