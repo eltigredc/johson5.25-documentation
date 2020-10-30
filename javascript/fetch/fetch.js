@@ -106,6 +106,44 @@ fetch('http://localhost:3000/heroes', {
 .then(data => { console.log(data); })
 .catch(error => { console.error(error);	});
 
+// So, our database looks like this now:
+[
+  {
+    "id": 1,
+    "name": "Cyclops",
+    "alterEgo": "Scott Summers",
+    "abilities": [
+      "Optic force blasts",
+      "Master tactician"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Marvel Girl",
+    "alterEgo": "Jean Grey",
+    "abilities": [
+      "Telekinesis",
+      "Telepathy",
+      "Astral projection"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Beast",
+    "alterEgo": "Hank McCoy",
+    "abilities": [
+      "Genius-level intellect",
+      "Animal-like physiology with enhanced physical attributes and sharp claws and teeth"
+    ]
+  },
+  {
+	"id": 4,
+	"name": "Maria",
+	"alterEgo": "Mary the best",
+	"abilities": ["js", "css", "php"]
+  }
+]
+
 //**************************************************************************************************
 
 // For deleting a hero from the database, we have to specify the id of the hero in the url, and add DELETE method
@@ -113,3 +151,32 @@ fetch('http://localhost:3000/heroes/' + heroId, { method: "DELETE" })
 .then(response => response.json())
 .then(data => { console.log(data); })
 .catch(error => { console.error(error);	});
+
+// After deleting the hero with the id 3, our database looks like this now:
+[
+  {
+    "id": 1,
+    "name": "Cyclops",
+    "alterEgo": "Scott Summers",
+    "abilities": [
+      "Optic force blasts",
+      "Master tactician"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Marvel Girl",
+    "alterEgo": "Jean Grey",
+    "abilities": [
+      "Telekinesis",
+      "Telepathy",
+      "Astral projection"
+    ]
+  },
+  {
+	"id": 4,
+	"name": "Maria",
+	"alterEgo": "Mary the best",
+	"abilities": ["js", "css", "php"]
+  }
+]
