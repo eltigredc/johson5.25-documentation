@@ -38,7 +38,7 @@ const nameArrayFunctions = [
 ];
    
 
-// METHODES(Functions in array) PRINCIPALE ASSOCIEES AUX ARRAYS : 
+// METHODES(Functions in array) PRINCIPALES ASSOCIEES AUX ARRAYS : 
 
 // Determine l'objet en renvoyant une valeur boléenne : true si l'objet est un array, false si l'objet n'est pas un array
 nameOfTheArray.isArray() 
