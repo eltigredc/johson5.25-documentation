@@ -60,6 +60,7 @@ nameOfTheArray.push();
 // Renverse l'ordre des éléments dans un array 
 nameOfTheArray.reverse();
 
+
 nameOfTheArray.pop();
 
 nameOfTheArray.shift();
@@ -71,15 +72,69 @@ nameOfTheArray.splice();
 
 // FOREACH LOOP OU EN ES6 : FILTER / MAP / SOME / REDUCE METHODES
 
-nameOfTheArray.forEach()
+/* forEach est une methode qui prend une fonction(callBackFunction = fonction appelée dans une autre fonction High Order Function) et s'execute sur chacun des éléments de l'array, un par un.
 
-nameOfTheArray.map() 
+-Fonctionne de la même façon que la "for loop" mais elle est plus légere a écrire et le scope est plus étroit(cleaner code).
+
+- Methode generique donc a utiliser seulement s'il n'y a pas de méthodes plus specifiques utiles pour l'execution.
+*/
+nameOfTheArray.forEach(function(value, index, array){
+
+});
+
+/*
+Methode filter(), comme la forEach() prend une fonction et itere sur chacun des elements de l'array en les confrontant a cette fonction. 
+
+La difference majeure entre la forEach et la filter est que cette derniere methode EXECUTE la fonction sur chacun des elements ET VERIFIE LE RETURN STATEMENT. Seulement si le return renvoie un "true", l'element est poussé dans l'array résultant. Si return ="false", l'element n'est pas repris dans l'array.
+*/
+
+//Formule
+let newArray = nameOfTheArray.filter(function(element, index, array){
+
+});
+
+//Exemple
+let sample = [1, 2, 3] 
+// es5
+let result = sample.filter(function(elem){
+    return elem !== 2;
+})
+console.log(result)
+// es6
+let result = sample.filter(elem => elem !== 2)
+/* output */
+[1 , 3]
+
+
+/*Comme forEach() et la filter(), la méthode map() prend une callback fonction et itère, exécute la fonction sur chacun des éléments des l'array;
+
+AVEC POUR DIFFERENCE que la map() va générer un nouvel array basé sur l'array préexistant : le nouvel array sera constitué des elements transformer par la callback fonction
+
+Sert a modifier les éléments d'un array*/
+
+// Formule
+let newArray = nameOfTheArray.map(function(element, index, array){
+
+// Exemple
+let sample = [1, 2, 3];
+// es5
+let mapped = sample.map(function(elem) {
+    return elem * 10;
+});
+// es6
+let mapped = sample.map(elem => elem * 10)
+console.log(mapped);
+/* output */
+[10, 20, 30]
+
+
 
 nameOfTheArray.some()
 
+
 nameOfTheArray.reduce()
 
-nameOfTheArray.filter()
+
 
 
 
